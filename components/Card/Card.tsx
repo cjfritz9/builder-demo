@@ -15,14 +15,14 @@ const Card: React.FC<Props> = ({
   imageURL
 }) => {
   return (
-    <div className='card card-compact w-96 bg-base-100 shadow-xl'>
+    <div className='card card-compact w-full bg-base-100 shadow-xl'>
       <figure>
         <Image src={imageURL} alt='Shoes' height={227} width={384} />
       </figure>
-      <div className='card-body'>
+      <div className='card-body text-black'>
         <h2 className='card-title'>{title}</h2>
-        <p>{description}</p>
-        <div className='card-actions justify-end'>
+        <p className='h-24 overflow-hidden'>{description}</p>
+        <div className='card-actions mt-4 justify-end'>
           <button className='btn btn-primary'>{buttonText}</button>
         </div>
       </div>

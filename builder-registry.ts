@@ -2,6 +2,7 @@
 import { builder, Builder } from '@builder.io/react';
 import Counter from './components/Counter/Counter';
 import Card from './components/Card/Card';
+import Announcement from './components/Header/Announcement';
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -14,7 +15,6 @@ Builder.registerComponent(Counter, {
     }
   ]
 });
-
 
 Builder.registerComponent(Card, {
   name: 'Card',
@@ -30,10 +30,20 @@ Builder.registerComponent(Card, {
     {
       name: 'buttonText',
       type: 'string',
-      defaultValue: 'Buy Now',
+      defaultValue: 'Buy Now'
     },
     {
       name: 'imageURL',
+      type: 'string'
+    }
+  ]
+});
+
+Builder.registerComponent(Announcement, {
+  name: 'Announcement',
+  inputs: [
+    {
+      name: 'leftSideMessage',
       type: 'string'
     }
   ]

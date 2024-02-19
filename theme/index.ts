@@ -1,6 +1,4 @@
-const defaultLightTheme = require('daisyui/src/theming/themes')[
-  '[data-theme=light]'
-];
+const defaultLightTheme = require('daisyui/src/theming/themes')['light'];
 
 export const themes = [
   {
@@ -8,7 +6,7 @@ export const themes = [
       ...defaultLightTheme,
       // primary: '#301512',
       // 'primary-content': '#FFFFFF',
-      // secondary: '#DF542E',
+      secondary: '#252525',
       // 'secondary-content': '#1d232a',
       // accent: '#594442',
       // 'accent-content': '#1d232a',
